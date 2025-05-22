@@ -10,11 +10,6 @@ token = '7833360133:AAFmP1jYjsdqk8jQLccbB8ZOS04xYe9Glsg'
 bot = telebot.TeleBot(token, parse_mode="HTML")
 subscriber = '6832492482'
 SLEEP_TIME = random.uniform(15, 40)
-from telegram.ext import CommandHandler
-
-async def omk(update, context):
-    await update.message.reply_text("رد على /omk")
-
 app.add_handler(CommandHandler("omk", omk))
 @bot.message_handler(commands=["start"])
 def start(message):
